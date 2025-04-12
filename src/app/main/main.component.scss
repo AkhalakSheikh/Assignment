@@ -1,0 +1,371 @@
+.custom-button {
+    background-color: white;
+    border: 1px solid;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    width: 25%;
+    height: 5vh;
+    padding: 1%;
+}
+
+.mainbshadow{
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+a {
+    padding: 8px 15px 8px 15px; 
+    text-decoration: none;
+    font-size: 25px; 
+    color: #818181; 
+    display: block; 
+
+    &:hover {
+        color: #f1f1f1; 
+    }
+}
+
+.maindiv{
+    margin-right: -4%;
+    width: 30vw;
+    text-align: right;
+}
+
+.material-symbols-outlined{
+    font-size: 22px !important;
+    color: gray !important;
+}
+
+
+.imar{
+    margin: 0% 10%; 
+}
+
+.action{
+    margin: 0% 15%;
+}
+
+.actiond{
+    text-align: left;
+}
+
+.hmargin{
+    margin: 0% 3%;
+}
+
+
+.buttoninner{
+    padding: 2%;
+    font-size: 16px;
+}
+
+.contentheight{
+  height: 30%;
+}
+
+.subccolor{
+  color: gray;
+  font-size: 13px;
+}
+
+.round-image {
+    width: 35px; 
+    height: 35px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-bottom: -3%;
+}
+.display{
+    display: flex;
+}
+
+.search{
+    padding: 3% 0%;
+}
+
+.contentmargin{
+    margin: 3px 10px;
+}
+
+.dwidth{
+  width: 54%;
+}
+
+.dflot{
+  float: right;
+}
+
+.contentwidth{
+    width: 80%;
+}
+
+.contentwidth2{
+    width: 20%;
+}
+
+.divcmargin{
+    margin: 0px 0px;
+}
+
+.divborder{
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.divMargin{
+    margin: 0% 1%;
+}
+
+.divheight1{
+    height: 40vh;
+}
+
+.childdivmargin{
+    margin: 0% 0.7%;
+}
+
+.innerdiv1{
+    height: 15%;
+    padding: 8px 0px;
+    margin: 0% 1%;
+}
+
+.innerdiv2{
+    height: 60%;
+}
+
+
+.divWidth1{
+    width: 53vw; 
+}
+
+.divWidth2{
+    width: 28vw; 
+}
+.maindiv1{
+    margin: 2% 1%;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid gray;
+    margin-block-start: 0em !important;
+    margin-block-end: 0em !important;
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+  min-width: 310px;
+  max-width: 800px;
+  margin: 1em auto;
+}
+
+#container {
+  height: 400px;
+}
+
+.highcharts-data-table table {
+  font-family: Verdana, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #ebebeb;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.highcharts-data-table caption {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.highcharts-data-table th {
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+  padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+  background: #f1f7ff;
+}
+
+.highcharts-description {
+  margin: 0.3rem 10px;
+}
+
+.viewbtn{
+    height: 80%;
+    float: right;
+    border-color: gray !important;
+    border: 1px solid !important;
+}
+.viewbtn1{
+  height: 80%;
+  width: 30%;
+  float: right;
+  border-color: gray !important;
+  border: 1px solid !important;
+}
+
+.divchart{
+    margin: 0% 0% 0% 20%;
+}
+
+.grid-table {
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    row-gap: 1px; /* Only horizontal spacing */
+    background-color: #ccc;
+    font-family: Arial, sans-serif;
+    text-align: left;
+  }
+  .grid-table :hover{
+    background-color: #d2d9d9;
+  }
+
+  .grid-table div {
+    padding: 12px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc; /* Optional horizontal lines */
+  }
+
+  .grid-header {
+    background-color: #6B46C1;
+    color: black;
+    font-weight: bold;
+    border-bottom: 2px solid #6B46C1;
+  }
+
+
+  .pagination {
+    display: flex;
+    // justify-content: center;
+    padding: 1rem;
+    gap: 8px;
+  
+    .page-btn {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      color: #333;
+      padding: 8px 14px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background-color: #6B46C1;
+        color: #fff;
+        border-color: #6B46C1;
+      }
+  
+      &.active {
+        background-color: #6B46C1;
+        color: #fff;
+        font-weight: bold;
+      }
+  
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
+
+  .span{
+    padding: 3% 3%;
+    }
+
+    .img{
+        padding: 0% 3%;
+        }
+
+  .pagnum{
+    width: 67vw;
+    text-align: center;
+  }
+
+  .chip {
+    padding: 4px 10px;
+    font-size: 12px;
+    background-color: rgb(207, 247, 207);
+    border-radius: 16px;
+    border: 1px solid #20650d;
+    color: #20650d;
+    font-weight: 500;
+    margin: 4px;
+  }
+
+  .chip1 {
+    padding: 4px 10px;
+    font-size: 12px;
+    background-color: #e0e0e0;
+    border-radius: 16px;
+    border: 1px solid gray;
+    // color: #333;
+    font-weight: 500;
+    margin: 4px;
+  }
+
+  .chip2 {
+    padding: 4px 10px;
+    font-size: 12px;
+    // background-color: #e0e0e0;
+    border-radius: 16px;
+    border: 1px solid;
+    // color: #333;
+    font-weight: 500;
+    margin: 4px;
+  }
+
+  .bar{
+    background: White;
+    display: block;
+    height: 5px;
+    // border: 1px solid black;
+    border-radius: 10px;
+    margin: 6% 0%;
+    width: 80%;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+
+  .bar span{
+    height: 5px;
+    float: left;
+    background: #6B46C1;
+  }
+
+  .html{
+    animation: html 3s;
+  }
+
+  .per{
+    margin: 3% 0% 0% 3%;
+    font-size: 12px;
+  }
+
+  .popm{
+    margin: 5%;
+  }
+

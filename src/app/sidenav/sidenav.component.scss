@@ -1,0 +1,64 @@
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+}
+
+.sidenav {
+    height: 100%;
+    width: 60px; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0%;
+    background-color: #111; 
+    overflow-x: hidden; 
+    transition: 0.5s; 
+
+    a {
+        padding: 8px 15px 8px 15px; 
+        text-decoration: none;
+        font-size: 25px; 
+        color: #818181; 
+        display: block; 
+        text-align: right;
+
+        &:hover {
+            color: #f1f1f1; 
+        }
+    }
+
+    .closebtn {
+        font-size: 36px; 
+        position: absolute; 
+        top: 0;
+        right: 25px; 
+        color: #818181; 
+    }
+}
+
+.main {
+   margin-left: 70px;
+    transition: margin-left 0.5s; 
+    padding: 16px; 
+}
+
+.openbtn {
+    font-size: 20px; 
+    cursor: pointer; 
+    background-color: #111; 
+    color: white; 
+    border: none;
+    padding: 10px 15px; 
+    margin: 10px;
+}
+
+.round-image {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+.bpart{
+    margin-top: 35vh;
+}

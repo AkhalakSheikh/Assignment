@@ -1,0 +1,149 @@
+
+<div style="display: flex;">
+    <div style="width: 20vw;">
+        <h2 style="font-family: sans-serif;">Welcome back, Oliva</h2>
+    </div>
+    <div style="width: 38vw;">
+    </div>
+    <div class="maindiv" style="display: flex;">
+        <span style="width: 25%;"></span>
+        <span class="material-symbols-outlined search">search</span>
+        <button class="custom-button" style="display: flex;"><span class="material-symbols-outlined" >tune</span> <span class="buttoninner">Customize</span></button>
+        <button class="custom-button" style="display: flex;"><span class="material-symbols-outlined">cloud_download</span> <span class="buttoninner">Export</span></button>
+    </div>
+</div>
+
+<div style="display: flex;">
+    <div class="divborder divheight1 divWidth1 divMargin mainbshadow">
+        <div class="innerdiv1" style="display: flex;">
+              <div class="childdivmargin">
+                   <a href=""><img src="../../assets/img/cube.png" alt="Round Image" class="round-image "></a>
+              </div>
+              <div class="childdivmargin">
+                <h3 class="contentmargin">Vendor breakdown</h3>
+                <p class="contentmargin subccolor">keep track of vendor and their security raiting</p>
+              </div>
+              <div class="childdivmargin dwidth">
+                <a href="#" class="dflot"><span class="material-symbols-outlined">more_vert</span></a>
+              </div>
+        </div>
+            <hr>
+        <div class="innerdiv2">
+            <div id="container" style="width:100%; height:100%;"></div>
+        </div>
+            <hr>
+        <div class="innerdiv1">
+            <button class="custom-button viewbtn">View Full Report</button>
+        </div>
+    </div>
+    <div class="divborder divheight1 divWidth2 divMargin mainbshadow">
+        <div class="innerdiv1" style="display: flex;">
+            <div class="childdivmargin contentwidth">
+                <h3 class="contentmargin">Vendor Monitored</h3>
+                <p class="contentmargin subccolor">you're using 80% of available spots.</p>
+           </div>
+           <div class="childdivmargin">
+            <a href="#"><span class="material-symbols-outlined">more_vert</span></a>
+           </div>
+        </div>
+            <hr>
+        <div class="innerdiv2">
+            <div id="containerdounat" style="width:100%; height:80%;"></div>
+            <div>
+                <h4 class="divchart">You are almost reach your limit.</h4>
+                <p style="font-size: small;color: gray; margin: 0% 1%;">you've used 80% of your available spot. upgrade plans to monitor more vendors.</p>
+            </div>
+        </div>
+            <hr>
+        <div class="innerdiv1">
+            <!-- <button class="custom-button viewbtn">Upgrade Plan</button> -->
+            <button class="custom-button viewbtn1" style="display: flex;"><span class="material-symbols-outlined" >bolt</span> <span style="padding: 3% 0%;">Upgrade Plan</span></button>
+        </div>
+    </div>
+</div>
+
+<div style="width: 100%;">
+    <div class="divborder divMargin maindiv1 mainbshadow" style="width: 83vw; height: auto;">
+        <div class="innerdiv1" style="display: flex;">
+            <div class="childdivmargin contentwidth" style="display: flex;">
+                <span><h3 class="contentmargin">Team members</h3></span>
+                <span class="chip1 contentheight">100 users</span>
+           </div>
+           <div class="childdivmargin contentwidth2">
+            <a href="#" style="float: right;"><span class="material-symbols-outlined">more_vert</span></a>
+           </div>
+        </div>
+        <hr>
+        <div>
+            <h2 style="text-align:center;"></h2>
+    
+            <div class="grid-table">
+              <ng-container *ngFor="let j of data.grid_columns">
+                <div class="grid-header" *ngIf="j.column_name == 'Name'">
+                    <span class="hmargin"><input type="checkbox" name="" id="" (click)="checkall()"></span>
+                    <span class="hmargin">{{j.column_name}}</span>
+                </div>
+                <div class="grid-header" *ngIf="j.column_name != 'Name'">{{j.column_name}}</div>
+              </ng-container>
+              <div class="grid-header actiond"><span class="action">Action</span></div>
+          
+                <ng-container *ngFor="let i of data.grid_data;let in=index">
+                    <div style="width: 20vw; display: flex;" fxLayout="row" >
+                            <span fxFlex="20%" class="span">
+                                <input type="checkbox" name="" id="" [checked]="i.checked">
+                            </span>
+                            <span fxFlex="20%" class="img"> 
+                                <img src="../../assets/img/Capture.PNG" alt="Round Image" class="round-image">
+                            </span>
+                            <span fxFlex="60%">
+                                    <p>
+                                        <b>{{i.name.first_name}}{{i.name.last_name}}</b>
+                                    </p>
+                                    <p>
+                                        {{i.name.handle}}
+                                    </p>
+                                
+                            </span>
+                    </div>
+                    <div><span [ngClass]="{'chip': i.status === 'Customer','chip1': i.status !== 'Customer'}"><b>●{{i.status}}</b></span></div>
+                    <div>{{i.role}}</div>
+                    <div style="display: flex;">
+                        <span  class="bar">
+                            <span class="html" [ngStyle]="{ 'width': dynamicWidth[in]}"></span>
+                        </span>
+                        <span class="per">{{i.license_used}}%</span>
+                    </div>
+                    <div>
+                        <span *ngFor="let j of i.teams">
+                            <span class="chip2" [ngStyle]="{ 'background-color': j.background_color, 'color': j.text_color, 'border-color':j.text_color }"><b>{{j.value}}</b></span>
+                        </span>
+                    </div>
+                    <div style="text-align: right;display: flex;">
+                        <a href="" (click)="delete(in, $event,i.name.first_name,i.name.last_name)"> <span class="material-symbols-outlined imar">delete</span></a> 
+                        <a href="" (click)="openDialog(i.name.first_name,i.name.last_name,$event)"> <span class="material-symbols-outlined imar">edit</span></a>    
+                    </div>
+                </ng-container>
+                       
+                
+            </div>
+        </div>
+        <hr>
+        <div class="pagination">
+            <div>
+                <button class="page-btn">&laquo;- Previous</button>
+            </div>
+            <div class="pagnum">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">...</button>
+                <button class="page-btn">8</button>
+                <button class="page-btn">9</button>
+                <button class="page-btn">10</button>
+            </div>
+            <div>
+                <button class="page-btn" style="float: right;">Next -&raquo;</button>
+            </div>
+          </div>
+    </div>
+</div>
